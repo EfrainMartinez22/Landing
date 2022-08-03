@@ -15,14 +15,14 @@ class CreateCitasTable extends Migration
     {
         Schema::create('citas', function (Blueprint $table) {
             $table->id();
-            $table -> string('Nombre');
-            $table -> string('ApellidoPaterno');
-            $table -> string('ApellidoMaterno');
-            $table -> string('Edad');
-            $table -> string('Telefono');
-            $table -> string('Especialidad');
-            $table -> string('Dia');
-            $table -> string('Hora');
+            $table->string('Nombre');
+            $table->string('ApellidoPaterno');
+            $table->string('ApellidoMaterno');
+            $table->string('Edad');
+            $table->string('Telefono');
+            $table->string('Especialidad');
+            $table->string('Dia');
+            $table->string('Hora');
             $table->timestamps();
         });
     }

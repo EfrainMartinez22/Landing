@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Citas;
+use App\Models\Cita;
 use Illuminate\Http\Request;
 
-class CitasController extends Controller
+class CitaControler extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class CitasController extends Controller
      */
     public function index()
     {
-        //
-        return view('citas.index');
+        return Cita::all();
     }
 
     /**
@@ -23,11 +22,7 @@ class CitasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-        return view('citas.create');
-    }
+   
 
     /**
      * Store a newly created resource in storage.
@@ -38,50 +33,42 @@ class CitasController extends Controller
     public function store(Request $request)
     {
         //
+        return Cita::create($request->all());
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Citas  $citas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Citas $citas)
+    public function show($id)
     {
         //
+        return Cita::fint($id);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Citas  $citas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Citas $citas)
+        public function update(Request $request, $id)
     {
         //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Citas  $citas
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Citas $citas)
-    {
-        //
+        return Cita::find($id)->update($request->all());
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Citas  $citas
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Citas $citas)
+    public function destroy($id)
     {
         //
+        return Cita::destroy($id);
     }
 }
