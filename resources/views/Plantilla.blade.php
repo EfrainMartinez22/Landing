@@ -37,8 +37,21 @@
                     <li class="nav-link active">
                         <a href="/" class="dropdown-item" ><strong href="/" class="nav-link text-white" >Index</strong></a>
                     </li>
-                    <li class="nav-link active">
-                        <a href="/Procedimientos" class="dropdown-item" ><strong class="nav-link text-white">Procedimientos</strong></a>
+                    <li class="nav-link active dropdown">
+                        <strong class="nav-link dropdown-toggle text-white" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Procedimientos
+                        </strong>
+                        <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/biche">Bichectomía</a></li>
+                            <li><a class="dropdown-item" href="/blefaro">Blefaroplastía</a></li>
+                            <li><a class="dropdown-item" href="/lifting">Lifting de labios</a></li>
+                            <li><a class="dropdown-item" href="/lipo">Liposucción de papada</a></li>
+                            <li><a class="dropdown-item" href="/marcaje">Marcaje mandibular</a></li>
+                            <li><a class="dropdown-item" href="/otop">Otoplastía</a></li>
+                            <li><a class="dropdown-item" href="/rino">RinoPlastía</a></li>
+                        </ul>
+                           
                     </li>
                     <li class="nav-link active">
                         <a href="/citas" class="dropdown-item" ><strong href="/citas" class="nav-link text-white">Citas</strong></a>
@@ -105,6 +118,7 @@
 @yield('mvv')
 @yield('login')
 @yield('citas')
+@yield('galeria')
 
 
  <div>
