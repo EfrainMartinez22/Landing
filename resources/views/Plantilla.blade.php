@@ -241,7 +241,7 @@
     </div>
    @yield('mapa')
     <div class="row align-items-center">
-        <p>©Copyright2022 | <strong class="text-white">MediCitas UT</strong> | All rights reserved</p>
+        <p>©Copyright2022 | <strong class="text-white">MediCitas UT</strong> | Todos los derechos reservados</p>
     </div>
 
 </div>
