@@ -35,10 +35,13 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-link active">
-                        <strong href="/" class="nav-link text-white" >Index</strong>
+                        <a href="/" class="dropdown-item" ><strong href="/" class="nav-link text-white" >Index</strong></a>
                     </li>
                     <li class="nav-link active">
-                        <strong href="" class="nav-link text-white">Procedimientos</strong>
+                        <a href="/Procedimientos" class="dropdown-item" ><strong class="nav-link text-white">Procedimientos</strong></a>
+                    </li>
+                    <li class="nav-link active">
+                        <a href="/citas" class="dropdown-item" ><strong href="/citas" class="nav-link text-white">Citas</strong></a>
                     </li>
                     <li class="nav-link active dropdown">
                         <strong class="nav-link dropdown-toggle text-white" href="#" id="navbarDarkDropdownMenuLink" role="button"
@@ -57,6 +60,7 @@
                         </ul>
                            
                     </li>
+                    
                 </ul>
                 @guest
                     
@@ -68,7 +72,7 @@
 
                     @if (Route::has('register'))
                         <li class="nav-link active">
-                            <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                         </li>
                     @endif
                 @else

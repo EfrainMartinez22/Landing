@@ -39,6 +39,10 @@ Route::get('/citas', function () {
     return view('Citas');
 })->name('citas');
 
+Route::get('/Procedimientos', function () {
+    return view('Proce');
+})->name('Procedimientos');
+
 Route::get('/citas/create',[CitasController::class,'create']);
 
 //Route::resource('citas', CitasController::class);
